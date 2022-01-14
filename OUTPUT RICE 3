@@ -1,0 +1,57 @@
+WELCOME TO HEALTHY LIFE
+Enter your name : Juwita
+Enter your gender, if female press F if male press M : F
+Enter your age: 20
+Enter your height in m : 1.48
+Enter your weight in kg: 60
+
+Enter your type of rice consume
+1.White Rice
+2.Brown Rice
+3.Purple Rice
+4.Black Rice
+5.Red Rice
+Choose a number: 1
+
+Enter your meals per day that you eat rice: 3
+Enter how many serving of rice you eat per meal : 2
+Enter how many calories in one serving of your rice: 230
+
+How active are you
+1.Not active
+2.Moderate
+3.Active
+Choose a number: 1
+
+Your bmi is : 27.39
+You are in overweight range and need to lose some weight.
+
+Healthy weight for the height : 40.52kg - 54.76kg
+Your calories of rice consume per day is : 1380.00
+
+7700 calories equal to 1 kg
+weight gain if no calories burn : 0.18kg
+30 minutes of running can burn 200 to 500 calories
+
+Weight need to be lose are in between 5.24kg to 19.48kg
+Sports suitable for overweight and obese bmi person are swimming, sprinting, soccer, martial arts, or basketball
+Suggested diet:
+Consume plenty of fruits and vegetables, wholegrain varieties, meats, and eat brown rice that contain lots of fiber.
+Men are advised to consume less than 1900 calories a day.
+Women are advised to consume less than 1400 calories a day.
+
+Enter your weight after a month:
+56
+
+Weight need to be lose are in between 1.24kg to 15.48kg
+Sports suitable for overweight and obese bmi person are swimming, sprinting, soccer, martial arts, or basketball
+Suggested diet:
+Consume plenty of fruits and vegetables, wholegrain varieties, meats, and eat brown rice that contain lots of fiber.
+Men are advised to consume less than 1900 calories a day.
+Women are advised to consume less than 1400 calories a day.
+
+Enter your weight after a month:
+52
+
+Congrats! You have reach healthy weight and normal BMI.
+Thank you for using HealthyLife, have a good day!
