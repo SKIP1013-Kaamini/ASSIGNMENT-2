@@ -1,0 +1,128 @@
+package assignment;
+import java.util.Scanner;
+public class Assignment2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		String name; 
+	    char gender='F';
+	    double weight, height, bmi, caloriesperserving, caloriesconsume,weightgain;
+	    double minweight,maxweight;
+	    double addweight1,addweight2,loseweight1,loseweight2;
+	    int age, mealsperday, servingpermeal, activelevel,ricetype;
+	    
+	    System.out.println("WELCOME TO HEALTHY LIFE");
+	    System.out.print("Enter your name : ");
+	    name = sc.nextLine();
+	    System.out.print("Enter your gender, if female press F if male press M : ");
+	    gender = sc.next().charAt(0);
+	    System.out.print("Enter your age: ");
+	    age = sc.nextInt();
+	    System.out.print("Enter your height in m : ");
+	    height = sc.nextDouble();
+	    System.out.print("Enter your weight in kg: ");
+	    weight = sc.nextDouble();
+	    
+	    System.out.println();
+	    System.out.print("Enter your type of rice consume"
+	    		+ "\n1.White Rice"
+	    		+ "\n2.Brown Rice"
+	    		+ "\n3.Purple Rice"
+	    		+ "\n4.Black Rice"
+	    		+ "\n5.Red Rice"
+	    		+ "\nChoose a number: ");
+	    ricetype = sc.nextInt();
+	    System.out.println();
+	    System.out.print("Enter your meals per day that you eat rice: ");
+	    mealsperday = sc.nextInt();
+	    System.out.print("Enter how many serving of rice you eat per meal : ");
+	    servingpermeal = sc.nextInt();
+	    System.out.print("Enter how many calories in one serving of your rice: ");
+	    caloriesperserving = sc.nextDouble();
+	    
+	    System.out.println();
+	    System.out.print("How active are you"
+	    		+ "\n1.Not active"
+	    		+ "\n2.Moderate"
+	    		+ "\n3.Active"
+	    		+ "\nChoose a number: ");
+	    activelevel = sc.nextInt();
+	     
+	    System.out.println();
+	    bmi = weight/Math.pow(height,2);
+	    System.out.printf("Your bmi is : %.2f",bmi);
+	    
+	    
+	    if(bmi<18.5)
+       	     System.out.println("\nYou are underweight and cannot afford to lose more.");
+       
+        else if((bmi>=18.5)&&(bmi<25))
+        	 System.out.println("\nNice!! you are in healthy weight range.");
+       
+        else if((bmi>=25)&&(bmi<30))
+        	 System.out.println("\nYou are in overweight range and need to lose some weight.");
+       
+        else
+        	 System.out.println("\nYou are in obese range and need to lose weight.");
+	    
+	    
+	    minweight = (18.5)*Math.pow(height,2);
+	    maxweight = (25.0)*Math.pow(height,2);
+	    
+	    System.out.printf("%nHealthy weight for the height : %.2fkg - %.2fkg",minweight,maxweight);
+	    
+	    caloriesconsume = caloriesperserving*servingpermeal*mealsperday;
+	    System.out.printf("%nYour calories of rice consume per day is : %.2f",caloriesconsume);
+	    System.out.println();
+	    
+	    System.out.print("\n7700 calories equal to 1 kg");	    
+	    weightgain = caloriesconsume/7700;
+	    System.out.printf("%nweight gain if no calories burn : %.2fkg%n",weightgain);	    
+	    System.out.println("30 minutes of running can burn 200 to 500 calories");
+	    
+	    do {
+	    if((weight<minweight)&&(weight<maxweight)) {
+	    	addweight1 = minweight-weight;
+	    	addweight2 = maxweight-weight;
+	    	System.out.printf("%nWeight need to be gain are in between %.2fkg to %.2fkg",addweight1,addweight2);
+	    	System.out.println("\nSports suitable for underweight bmi person are yoga, pilates, swimming, weightlifting or biking");
+	    	System.out.println("Suggested diet:");
+	    	System.out.println("Consume plenty of good fats like avocados, nuts, plant-based oil and eat white rice");
+	    	System.out.println("Men are advised to consume around 2500 calories a day.");
+	    	System.out.println("Women are advised to consume around 200 calories a day.");
+	    }
+	    else if((weight>=minweight)&&(weight<=maxweight)) {
+	    	System.out.println("\nNo need to gain or lose weight, Please maintain your weight!");
+	    	System.out.println("Sports suitable for normal bmi person are yoga, pilates, swimming, weightlifting, biking, or running");
+	    	System.out.println("You can stay with your normal daily diet");
+	    	System.out.println("Men are advised to consume around 2500 calories a day.");
+	    	System.out.println("Women are advised to consume around 200 calories a day.");
+	    }
+	    else if((weight>minweight)&&(weight>maxweight)) {
+	    	loseweight1 = weight-maxweight;
+	    	loseweight2 = weight-minweight;
+	    	System.out.printf("%nWeight need to be lose are in between %.2fkg to %.2fkg",loseweight1,loseweight2);
+	    	System.out.println("\nSports suitable for overweight and obese bmi person are swimming, sprinting, soccer, martial arts, or basketball");
+	    	System.out.println("Suggested diet:");
+	    	System.out.println("Consume plenty of fruits and vegetables, wholegrain varieties, meats, and eat brown rice that contain lots of fiber.");
+	    	System.out.println("Men are advised to consume less than 1900 calories a day.");
+	    	System.out.println("Women are advised to consume less than 1400 calories a day.");
+	    }
+	    System.out.println();
+	    System.out.println("Enter your weight after a month:");
+	    weight = sc.nextInt();
+	    minweight = (18.5)*Math.pow(height,2);
+	    maxweight = (25.0)*Math.pow(height,2);
+	    }while(weight<minweight || weight>maxweight);
+	    
+	    System.out.println();
+	    System.out.println("Congrats! You have reach healthy weight and normal BMI.");
+	    System.out.println("Thank you for using HealthyLife, have a good day!");
+
+
+	}
+
+}
+
