@@ -1,0 +1,46 @@
+WELCOME TO HEALTHY LIFE
+Enter your name : Juwita
+Enter your gender, if female press F if male press M : F
+Enter your age: 20
+Enter your height in m : 1.48
+Enter your weight in kg: 41
+
+Enter your type of rice consume
+1.White Rice
+2.Brown Rice
+3.Purple Rice
+4.Black Rice
+5.Red Rice
+Choose a number: 1
+
+Enter your meals per day that you eat rice: 1
+Enter how many serving of rice you eat per meal : 1
+Enter how many calories in one serving of your rice: 250
+
+How active are you
+1.Not active
+2.Moderate
+3.Active
+Choose a number: 1
+
+Your bmi is : 18.72
+Nice!! you are in healthy weight range.
+
+Healthy weight for the height : 40.52kg - 54.76kg
+Your calories of rice consume per day is : 250.00
+
+7700 calories equal to 1 kg
+weight gain if no calories burn : 0.03kg
+30 minutes of running can burn 200 to 500 calories
+
+No need to gain or lose weight, Please maintain your weight!
+Sports suitable for normal bmi person are yoga, pilates, swimming, weightlifting, biking, or running
+You can stay with your normal daily diet
+Men are advised to consume around 2500 calories a day.
+Women are advised to consume around 200 calories a day.
+
+Enter your weight after a month:
+44
+
+Congrats! You have reach healthy weight and normal BMI.
+Thank you for using HealthyLife, have a good day!
