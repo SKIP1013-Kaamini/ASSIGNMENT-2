@@ -1,0 +1,162 @@
+Output for 1-Input and Output Data
+
+----------------------Welcome to UUM bakery product made, leftovers and donation system---------------------
+Please choose your actions: 
+1-Input and Output Data 
+2-View Donation Centre
+3-View Products Information 
+1
+---------------Welcome to Input and Output---------------- 
+
+Please enter the amounts of Tarts sold last month:
+1500
+Please enter the amounts of Pies sold last month:
+1500
+Please enter the amounts of Puddings sold last month:
+1500
+
+Please enter the amounts of Tarts made today:
+50
+Please enter the amounts of Pies made today:
+50
+Please enter the amounts of Puddings made today:
+50
+Please enter the amounts of Tarts sold today:
+45
+Please enter the amounts of Pies sold today:
+40
+Please enter the amounts of Puddings sold today:
+35
+
+
+Based on the average sold product last month: 
+Amounts of Tarts made today should be only  50.0
+Amounts of Pies made today should be only  50.0
+Amounts of Puddings today made should be only  50.0
+
+Amounts of product donated to food bank:
+Tarts donated is 2
+Pies donated is 5
+Puddings donated is 7
+
+Amount of product donated to homeless people:
+Tarts donated is 2
+Pie donated is 5
+Pudding donated is 7
+
+-------------------------------------------------------------------------------------------------
+
+Output for 2-View Donation Centre, 1-Food Bank
+
+----------------------Welcome to UUM bakery product made, leftovers and donation system---------------------
+Please choose your actions: 
+1-Input and Output Data 
+2-View Donation Centre
+3-View Products Information 
+2
+---------------Welcome to Donation Centre---------------- 
+List of donee: 
+1-Food Bank 
+2-Homeless People 
+
+Choose 1 or 2 to view the information of Food Bank and Homeless People respectively.
+1
+A food bank is a non-profit, charitable organization that distributes food to those who have difficulty purchasing enough to avoid hunger, 
+usually through intermediaries like food pantries and soup kitchens. Some food banks distribute food directly with their own food pantries.
+
+--------------------------------------------------------------------------------------------------
+
+Output for 2-View Donation Centre, 2- Homeless People
+
+----------------------Welcome to UUM bakery product made, leftovers and donation system---------------------
+Please choose your actions: 
+1-Input and Output Data 
+2-View Donation Centre
+3-View Products Information 
+2
+---------------Welcome to Donation Centre---------------- 
+List of donee: 
+1-Food Bank 
+2-Homeless People 
+
+Choose 1 or 2 to view the information of Food Bank and Homeless People respectively.
+2
+Homelessness is the condition of lacking stable, safe, and adequate housing. People can be categorized as homeless if they are:
+-living on the streets (primary homelessness);
+- moving between temporary shelters, including houses of friends, family, and emergency accommodation (secondary homelessness); and
+- living in private boarding houses without a private bathroom or security of tenure (tertiary homelessness).
+
+--------------------------------------------------------------------------------------------------
+
+Output for 3-View Products Information, 1-Tart
+
+----------------------Welcome to UUM bakery product made, leftovers and donation system---------------------
+Please choose your actions: 
+1-Input and Output Data 
+2-View Donation Centre
+3-View Products Information 
+3
+---------------Welcome to Product Information---------------- 
+List of products: 
+1-Tart 
+2-Pie  
+3-Pudding 
+
+Choose 1, 2 or 3 to view the information of Tart, Pie and Pudding respectively.
+1
+A tart is a baked dish consisting of a filling over a pastry base with an open top not covered with pastry. 
+The pastry is usually shortcrust pastry; the filling may be sweet or savoury, 
+though modern tarts are usually fruit-based, sometimes with custard. 
+Tartlet refers to a miniature tart; an example would be egg tarts. 
+The categories of "tart", "flan", "quiche", and "pie" overlap, with no sharp distinctions.
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+Output for 3-View Products Information, 2-Pie
+
+----------------------Welcome to UUM bakery product made, leftovers and donation system---------------------
+Please choose your actions: 
+1-Input and Output Data 
+2-View Donation Centre
+3-View Products Information 
+3
+---------------Welcome to Product Information---------------- 
+List of products: 
+1-Tart 
+2-Pie  
+3-Pudding 
+
+Choose 1, 2 or 3 to view the information of Tart, Pie and Pudding respectively.
+2
+A pie is a baked dish which is usually made of a pastry dough casing that contains a filling of various sweet or savoury ingredients.
+Sweet pies may be filled with fruit (as in an apple pie), nuts (pecan pie), 
+brown sugar (sugar pie), sweetened vegetables (rhubarb pie), 
+or with thicker fillings based on eggs and dairy (as in custard pie and cream pie). 
+Savoury pies may be filled with meat (as in a steak pie or a Jamaican patty), eggs and cheese (quiche) 
+or a mixture of meat and vegetables (pot pie).
+
+-------------------------------------------------------------------------------------------------------------
+
+Output for 3-View Products Information, 3-Pudding
+
+----------------------Welcome to UUM bakery product made, leftovers and donation system---------------------
+Please choose your actions: 
+1-Input and Output Data 
+2-View Donation Centre
+3-View Products Information 
+3
+---------------Welcome to Product Information---------------- 
+List of products: 
+1-Tart 
+2-Pie  
+3-Pudding 
+
+Choose 1, 2 or 3 to view the information of Tart, Pie and Pudding respectively.
+3
+Pudding is a type of food that can be either a dessert or a savoury (salty or spicy) dish that is part of the main meal.
+
+
+In the United States and Canada, pudding characteristically denotes a sweet, 
+milk-based dessert similar in consistency to egg-based custards, instant custards or a mousse, 
+often commercially set using cornstarch, gelatin or similar coagulating agent such as Jell-O. 
