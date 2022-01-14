@@ -1,0 +1,159 @@
+Hi! Welcome to Special Cake 
+	     Please fill the information detail 
+
+	Please state your name: NUR SUHAILA BINTI YEOP
+ 	Please state your contact number: 0134349430
+ 	Do you want delivery service? (true/false): true
+
+
+		#########################################################
+					State Cover
+		#########################################################
+		   State  	Area (code) 	Delivery Charge(RM)
+
+				Alor Setar [10] 	10
+		   Kedah	Jitra [8] 		8
+				Changlun [3]	    	3
+				Kodiang [5] 		5
+
+				Arau [6] 		6
+		   Perlis	Kangar [7]		7
+				Sanglang [4] 		4
+
+				Cancel [0] 			    
+
+		#########################################################
+		######################################################### 
+
+			Please state your address location no space yes '_' : 153_KAMPUNG_KODIANG_LAMA_DALAM
+			Which area are you? (Please state the code): 5
+
+	Please state the date of order (The date only): 15
+	Please state the month of order: 1
+
+	Please state date to pick up (7 days after date of order): 23
+	Please state the month of pick up: 1
+
+	 1. Special Choose 
+	 2. Special Slice 
+	 3. Special Cupcake 
+
+	 Which service do you prefer: 1
+
+
+		####################################################################################################################
+							 Category 1: Special Choose
+		####################################################################################################################
+
+		 Size(inch) [code] 	Weight (kg) 	Height(inch) 	Type [code] 	Name [code] 			Price (RM)
+
+											Tiramisu[9] 			    94
+											New York Cheese Cake[10] 	    100
+       		      		       					 Baked[40]	Black Forest[11] 		    106
+											Caramel Cream[7] 		    82
+											Oreo Cake[8] 			    88
+											Old Fashion Chocolate Cake[12]	    112
+
+											Tiramisu[9] 			    96
+											New York Cheese Cake[10] 	    102
+		     6[6]		   0.7 		     5 		 Steam[42]	Black Forest[11] 		    108
+											Caramel Cream[7] 		    84
+											Oreo Cake[8] 			    90
+											Old Fashion Chocolate Cake[12]	    114
+
+											Tiramisu[9] 			    114
+											New York Cheese Cake[10] 	    120
+       		       		      					Ice cream[60]	Black Forest[11] 		    126
+											Caramel Cream[7] 		    104
+											Oreo Cake[8] 			    108
+											Old Fashion Chocolate Cake[12]	    132
+		#####################################################################################################################
+
+											Tiramisu[9] 			    112
+											New York Cheese Cake[10] 	    120
+       		      		       					 Baked[40]	Black Forest[11] 		    128
+											Caramel Cream[7] 		    96
+											Oreo Cake[8] 			    104
+											Old Fashion Chocolate Cake[12]	    136
+
+											Tiramisu[9] 			    114
+											New York Cheese Cake[10] 	    122
+		     8[8]		   1.3 		     5 		 Steam[42]	Black Forest[11] 		    130
+											Caramel Cream[7] 		    98
+											Oreo Cake[8] 			    106
+											Old Fashion Chocolate Cake[12]	    138
+
+											Tiramisu[9] 			    132
+											New York Cheese Cake[10] 	    140
+		       		       		      			Ice cream[60]	Black Forest[11] 		    148
+											Caramel Cream[7] 		    116
+											Oreo Cake[8] 			    124
+											Old Fashion Chocolate Cake[12]	    136
+
+		#####################################################################################################################
+		#####################################################################################################################
+
+	For the first 3 questions below, Please state the CODE : 
+	Which size do you want? : 8
+	What is the name of cake that you want to order? : 12
+	What type of cake do you prefer? : 60
+	How many cakes do you want?: 1
+
+
+	 1. Special Choose 
+	 2. Special Slice 
+	 3. Special Cupcake 
+
+	Choose the type of packaging, based on the service you choose: 1
+####################################################################################################################
+				Packaging for Category 1: Special Choose
+####################################################################################################################
+ Type 		Height(inch)/Shape [code] 	Decoration colour/colour 	Material Used [code] 	Price (RM)
+
+	 		      				White 			  Glass]46] 		    184
+			4[4]    			Silver			  Clay[35] 		    140
+							Gold 			  Wood[35] 		    44
+Cake_Stand									  Aluminium[11] 	    28
+
+	 		      				White 			  Glass]46] 		    230
+			5[5]    			Silver			  Clay[35] 		    175
+							Gold 			  Wood[35] 		    55
+										  Aluminium[11] 	    35
+#########################################################################################################################
+		    Square[1] 				White 			  Glass[46] 		    46
+Cake_Board	    Rectangle[1]  			Silver			  Clay[35] 		    35
+		    Round[1]				Gold 			  Wood[7] 		    11
+										  Aluminium[11]		    7
+
+#########################################################################################################################
+#########################################################################################################################
+
+	For the questions below, Please state the CODE : 
+	What is the height/shape of packaging : 5
+	What is the material used to create the packaging? : 11
+
+
+###########################################
+	CUSTOMER'S RECEIPT
+	NAME: NUR SUHAILA BINTI YEOP
+	DATE OF ORDER: 15
+	DATE TO PICK UP: 23
+
+	DETAILS
+	CODE FOR SIZE OF CAKE: 8.0
+	CODE FOR CAKE: 12.0
+	CODE FOR TYPE OF CAKE: 60.0
+	QUANTITY OF CAKE: 1
+	TYPE OF PACKAGING: 1
+	CODE FOR PACKAGING SIZE: 5.0
+	CODE FOR PACKAGING MATERIAL: 11.0
+
+	SUBTOTAL: 211.0
+	DISCOUNT RECEIVE: 10.6
+	TOTAL PAYMENT: 205.5
+
+       *Please bring your container
+	3 days before date of pick up
+	Thank you for purchase from us*
+
+###########################################
