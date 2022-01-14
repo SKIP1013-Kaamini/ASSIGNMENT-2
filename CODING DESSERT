@@ -1,0 +1,158 @@
+package assignment;
+import java.util.Scanner;
+public class Assignment2 {
+
+	public static void main(String[] args) {
+	    Scanner sc= new Scanner (System.in);
+	    
+	    //declare all the variables
+	    double  tartSoldLastMonth, pieSoldLastMonth, puddingSoldLastMonth,
+	    		avgTartMade, avgPieMade, avgPuddingMade; 
+	    int	    tartMade, pieMade, puddingMade, 
+	    		tartSold, pieSold, puddingSold, 
+	    		tartLeft, pieLeft, puddingLeft, 
+	    		tartDonate, pieDonate, puddingDonate,
+	    		num1, num2;
+	    
+	    System.out.println("----------------------Welcome to UUM bakery product made, leftovers and donation system---------------------");
+	    
+	    System.out.println("Please choose your actions: ");
+	    System.out.println("1-Input and Output Data ");
+	    System.out.println("2-View Donation Centre");
+	    System.out.println("3-View Products Information ");
+	    num1= sc.nextInt();
+	    
+	    if(num1==1) {
+		    System.out.println("---------------Welcome to Input and Output---------------- ");
+		    //User input product sold last month
+		    System.out.println("\nPlease enter the amounts of Tarts sold last month:");
+		    tartSoldLastMonth = sc.nextDouble();
+	    
+		    System.out.println("Please enter the amounts of Pies sold last month:");
+		    pieSoldLastMonth   = sc.nextDouble();
+	    
+		    System.out.println("Please enter the amounts of Puddings sold last month:");
+		    puddingSoldLastMonth = sc.nextDouble();
+	    
+		    //User input product made today
+		    System.out.println("\nPlease enter the amounts of Tarts made today:");
+		    tartMade = sc.nextInt();
+	    
+		    System.out.println("Please enter the amounts of Pies made today:");
+		    pieMade   = sc.nextInt();
+	    
+		    System.out.println("Please enter the amounts of Puddings made today:");
+		    puddingMade = sc.nextInt();
+	    
+		    //User input product sold today
+		    System.out.println("Please enter the amounts of Tarts sold today:");
+		    tartSold = sc.nextInt();
+	    
+		    System.out.println("Please enter the amounts of Pies sold today:");
+		    pieSold = sc.nextInt();
+	    
+		    System.out.println("Please enter the amounts of Puddings sold today:");
+		    puddingSold = sc.nextInt();
+	    
+		    //Calculation for leftovers product
+		    tartLeft= tartMade-tartSold;
+		    pieLeft=pieMade-pieSold;
+		    puddingLeft=puddingMade-puddingSold;
+	    
+		    //Calculation for product donated to be equally distributed
+		    tartDonate=tartLeft/2;
+		    pieDonate=pieLeft/2;
+		    puddingDonate=puddingLeft/2;
+	    
+		    //Calculation for average product sold daily last month
+		    avgTartMade=tartSoldLastMonth/30;
+	    	avgPieMade=pieSoldLastMonth/30;
+	    	avgPuddingMade=puddingSoldLastMonth/30;
+	    
+	    	//Output the amount of product that should be made this month based on average product sold daily last month
+	    	System.out.println("\n\nBased on the average sold product last month: ");
+	    
+	    	System.out.println("Amounts of Tarts made today should be only  " + avgTartMade);
+	    
+	    	System.out.println("Amounts of Pies made today should be only  " + avgPieMade);
+	    
+	    	System.out.println("Amounts of Puddings today made should be only  " + avgPuddingMade);
+	    
+	    	//Output the amount of product donated to food bank
+	    	System.out.println("\nAmounts of product donated to food bank:");
+	    
+	    	System.out.println("Tarts donated is " + tartDonate);
+		   
+	    	System.out.println("Pies donated is " +pieDonate);
+	    
+	    	System.out.println("Puddings donated is " +puddingDonate);
+	
+	    	//Output the amount of product donated to homeless people
+	    	System.out.println("\nAmount of product donated to homeless people:");
+	    
+	    	System.out.println("Tarts donated is " + tartDonate);
+	   
+	    	System.out.println("Pie donated is " +pieDonate);
+	    
+	    	System.out.println("Pudding donated is " +puddingDonate);
+	   
+	    }
+	    else if(num1==2) {
+		    System.out.println("---------------Welcome to Donation Centre---------------- ");
+		    System.out.println("List of donee: ");
+		    System.out.println("1-Food Bank ");
+		    System.out.println("2-Homeless People ");
+		    
+		    System.out.println("\nChoose 1 or 2 to view the information of Food Bank and Homeless People respectively.");
+		    num2=sc.nextInt();
+		    if(num2==1) {
+		    	System.out.println("A food bank is a non-profit, charitable organization that distributes food to those who have "
+		    						+ "difficulty purchasing enough to avoid hunger, "
+		    						+ "\nusually through intermediaries like food pantries and soup kitchens. "
+		    						+ "Some food banks distribute food directly with their own food pantries.");
+		    }
+		    else if(num2==2) {
+		    	System.out.println("Homelessness is the condition of lacking stable, safe, and adequate housing. "
+		    						+ "People can be categorized as homeless if they are:");
+		    	System.out.println("-living on the streets (primary homelessness);\r\n"
+		    						+ "- moving between temporary shelters, including houses of friends, family, and emergency accommodation (secondary homelessness); and\r\n"
+		    						+ "- living in private boarding houses without a private bathroom or security of tenure (tertiary homelessness).");
+		    }
+	    }
+	    else if(num1==3) {
+	    	System.out.println("---------------Welcome to Product Information---------------- ");
+		    System.out.println("List of products: ");
+		    System.out.println("1-Tart ");
+		    System.out.println("2-Pie  ");
+		    System.out.println("3-Pudding ");
+		    
+		    System.out.println("\nChoose 1, 2 or 3 to view the information of Tart, Pie and Pudding respectively.");
+		    num2=sc.nextInt();
+		    if(num2==1) {
+		    	System.out.println("A tart is a baked dish consisting of a filling over a pastry base with an open top not covered with pastry. "
+		    						+ "\nThe pastry is usually shortcrust pastry; the filling may be sweet or savoury, "
+		    						+ "\nthough modern tarts are usually fruit-based, sometimes with custard. "
+		    						+ "\nTartlet refers to a miniature tart; an example would be egg tarts. "
+		    						+ "\nThe categories of \"tart\", \"flan\", \"quiche\", and \"pie\" overlap, with no sharp distinctions.");
+		    }
+		    else if (num2==2) {
+		    	System.out.println("A pie is a baked dish which is usually made of a pastry dough casing that contains a filling of various sweet or savoury ingredients."
+		    						+ "\nSweet pies may be filled with fruit (as in an apple pie), nuts (pecan pie), "
+		    						+ "\nbrown sugar (sugar pie), sweetened vegetables (rhubarb pie), "
+		    						+ "\nor with thicker fillings based on eggs and dairy (as in custard pie and cream pie). "
+		    						+ "\nSavoury pies may be filled with meat (as in a steak pie or a Jamaican patty), eggs and cheese (quiche) "
+		    						+ "\nor a mixture of meat and vegetables (pot pie).");
+		    }
+		    else if (num2==3) {
+		    	System.out.println("Pudding is a type of food that can be either a dessert or a savoury (salty or spicy) dish that is part of the main meal.\r\n"
+		    						+ "\r\n"
+		    						+ "\nIn the United States and Canada, pudding characteristically denotes a sweet, "
+		    						+ "\nmilk-based dessert similar in consistency to egg-based custards, instant custards or a mousse, "
+		    						+ "\noften commercially set using cornstarch, gelatin or similar coagulating agent such as Jell-O. ");
+		    }
+	    }
+
+	 
+	}
+
+}
