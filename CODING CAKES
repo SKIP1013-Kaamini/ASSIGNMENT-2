@@ -1,0 +1,429 @@
+package assignment2;
+
+class Sequence {
+
+	public static void main(String[] args) {
+		// try yg jadual tu...tab 2x..bagi nampak kemas.
+
+
+		java.util.Scanner sc = new java.util.Scanner(System.in);
+		
+		String name, colour_pack, address;
+		int    ans_no1,  order, take, type_pack, order_month, pickUp_month, ans_service, ans_state=0 ;
+		double  contact,ans_size1, price_one_cake, to_price, price_pack, sum_all, dis_rec, pay, size_pack, mater_pack, tot_payment, ans_code1;
+		double ans_type1;
+		boolean ans_delivery;
+	
+		 // part 1: customer information detail
+		System.out.print("\t	Hi! Welcome to Special Cake \n\t     Please fill the information detail \n\n\tPlease state your name: "); 
+		name=sc.nextLine();
+		System.out.print(" \tPlease state your contact number: ");
+		contact=sc.nextDouble();
+		
+		System.out.print(" \tDo you want delivery service? (true/false): ");
+		ans_delivery = sc.nextBoolean();
+		
+		//selection: single
+		if(ans_delivery == true) { 
+			
+			System.out.print("\n\n\t\t#########################################################");
+			System.out.print("\n\t\t\t\t\tState Cover");
+			System.out.print("\n\t\t#########################################################");
+			System.out.println("\n\t\t   State  \tArea (code) \tDelivery Charge(RM)");
+			
+			System.out.println("\n\t\t\t\tAlor Setar [10] \t10");
+			System.out.println("\t\t   Kedah\tJitra [8] \t\t8");
+			System.out.println("\t\t\t\tChanglun [3]\t    \t3");
+			System.out.println("\t\t\t\tKodiang [5] \t\t5");
+			System.out.println("\n\t\t\t\tArau [6] \t\t6");
+			System.out.println("\t\t   Perlis\tKangar [7]\t\t7");
+			System.out.println("\t\t\t\tSanglang [4] \t\t4");
+			System.out.println("\n\t\t\t\tCancel [0] \t\t\t    ");
+
+			System.out.print("\n\t\t#########################################################");
+			System.out.print("\n\t\t#########################################################");
+			
+			System.out.print(" \n\n\t\t\tPlease state your address location no space yes '_' : ");
+			address=sc.next();
+			
+			System.out.print("\t\t\tWhich area are you? (Please state the code): ");
+			ans_state = sc.nextInt(); //USED SEBAGAI PENGIRAAN AT RESIT
+		}
+	
+		
+		System.out.print("\n\tPlease state the date of order (The date only): "); 
+		order=sc.nextInt(); //put line, terus dia short cut next line
+		System.out.print("\tPlease state the month of order: "); 
+		order_month=sc.nextInt();
+		
+		System.out.print("\n\tPlease state date to pick up (7 days after date of order): ");
+		take=sc.nextInt(); 
+		System.out.print("\tPlease state the month of pick up: "); 
+		pickUp_month=sc.nextInt();
+		
+		//selection: dual & looping & expression
+		if (pickUp_month == order_month) {
+			
+			while (!((take - order) >= 7 && ((take - order) <= 29))) { 
+				System.out.print("\n\tInvalid date. Choose another date: ");
+				System.out.print("\n\tPlease state date to pick up (7 days after date of order): ");
+				take=sc.nextInt();
+			}
+		}
+		
+		else { 
+				while (!((take - order) >= -23 && ((take - order) <= 29))) {				
+				System.out.print("\n\tInvalid date. Choose another date: ");
+				System.out.print("\n\tPlease state date to pick up (7 days after date of order): ");
+				take=sc.nextInt();
+				}		
+			}	
+	
+		
+			//part2: service provided
+			System.out.print("\n\t 1. Special Choose \n\t 2. Special Slice \n\t 3. Special Cupcake \n\n\t Which service do you prefer: "); 
+			ans_service = sc.nextInt();
+		
+			//selection: multiple
+			if (ans_service == 1) {		
+			System.out.println("\n\n\t\t####################################################################################################################");
+			System.out.println("\t\t\t\t\t\t\t Category 1: Special Choose");
+			System.out.println("\t\t####################################################################################################################");
+			System.out.println("\n\t\t Size(inch) [code] \tWeight (kg) \tHeight(inch) \tType [code] \tName [code] \t\t\tPrice (RM)");
+			System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tTiramisu[9] \t\t\t    94");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tNew York Cheese Cake[10] \t    100");
+			System.out.println("       \t\t      \t\t       \t\t\t\t\t Baked[40]\tBlack Forest[11] \t\t    106");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tCaramel Cream[7] \t\t    82");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tOreo Cake[8] \t\t\t    88");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tOld Fashion Chocolate Cake[12]\t    112"); 
+			
+			System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tTiramisu[9] \t\t\t    96");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tNew York Cheese Cake[10] \t    102");
+			System.out.println("\t\t     6[6]\t\t   0.7 \t\t     5 \t\t Steam[42]\tBlack Forest[11] \t\t    108");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tCaramel Cream[7] \t\t    84");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tOreo Cake[8] \t\t\t    90");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tOld Fashion Chocolate Cake[12]\t    114"); 
+			
+			System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tTiramisu[9] \t\t\t    114");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tNew York Cheese Cake[10] \t    120");
+			System.out.println("       \t\t       \t\t      \t\t\t\t\tIce cream[60]\tBlack Forest[11] \t\t    126");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tCaramel Cream[7] \t\t    104");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tOreo Cake[8] \t\t\t    108");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tOld Fashion Chocolate Cake[12]\t    132"); 
+			System.out.println("\t\t#####################################################################################################################");
+			System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tTiramisu[9] \t\t\t    112");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tNew York Cheese Cake[10] \t    120");
+			System.out.println("       \t\t      \t\t       \t\t\t\t\t Baked[40]\tBlack Forest[11] \t\t    128");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tCaramel Cream[7] \t\t    96");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tOreo Cake[8] \t\t\t    104");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tOld Fashion Chocolate Cake[12]\t    136"); 
+			
+			System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tTiramisu[9] \t\t\t    114");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tNew York Cheese Cake[10] \t    122");
+			System.out.println("\t\t     8[8]\t\t   1.3 \t\t     5 \t\t Steam[42]\tBlack Forest[11] \t\t    130");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tCaramel Cream[7] \t\t    98");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tOreo Cake[8] \t\t\t    106");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tOld Fashion Chocolate Cake[12]\t    138"); 
+			
+			System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tTiramisu[9] \t\t\t    132");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tNew York Cheese Cake[10] \t    140");
+			System.out.println("\t\t       \t\t       \t\t      \t\t\tIce cream[60]\tBlack Forest[11] \t\t    148");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tCaramel Cream[7] \t\t    116");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tOreo Cake[8] \t\t\t    124");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tOld Fashion Chocolate Cake[12]\t    136"); 
+			System.out.println("\n\t\t#####################################################################################################################");
+			System.out.println("\t\t#####################################################################################################################");	
+		
+		}
+		else if (ans_service == 2) { 
+			System.out.print("\n\n\t\t####################################################################################################################");
+			System.out.println("\n\t\t\t\t\t\t\tCategory 2: Special Cupcake");
+			System.out.println("\t\t####################################################################################################################");
+			System.out.println("\n\t\t Size(inch) [code] \tWeight (kg) \tHeight(inch) \tType [code] \tName [code] \t\t\tPrice (RM)"); //2.2.2.4.4tab //
+			
+			System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tBanana[1.5] \t\t\t    4");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tCarrot[2.5] \t\t\t    6");
+			System.out.println("\t\t       \t\t      \t\t       \t\t\t Baked[1]\tChocolate[1.0] \t\t\t    3");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tVanila[0.5] \t\t\t    2");
+		
+			
+			System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tBanana[1.5] \t\t\t    4.5");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tCarrot[2.5] \t\t\t    6.5");
+			System.out.println("\t\t     2.0[2]\t\t   0.08 \t     1.5 \t Steam[1.5]\tChocolate[1.0] \t\t\t    3.5");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tVanila[0.5] \t\t\t    2.5");
+
+			
+			System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tBanana[1.5] \t\t\t    5");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tCarrot[2.5] \t\t\t    7");
+			System.out.println("\t\t       \t\t      \t\t       \t\t\t Ice cream[1]\tChocolate[1.0] \t\t\t    4");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tVanila[0.5] \t\t\t    3");
+
+			System.out.println("\t\t#####################################################################################################################");
+			System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tBanana[1.5] \t\t\t    4.75");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tCarrot[2.5] \t\t\t    7.25");
+			System.out.println("\t\t       \t\t      \t\t       \t\t\t Baked[1]\tChocolate[1.0] \t\t\t    3.5");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tVanila[0.5] \t\t\t    2.25");
+			
+			System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tBanana[1.5] \t\t\t    5.25");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tCarrot[2.5] \t\t\t    7.75");
+			System.out.println("\t\t     2.5[2.5]\t\t   0.08 \t     1.5 \t Steam[1.5]\tChocolate[1.0] \t\t\t    4");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tVanila[0.5] \t\t\t    2.75");
+			
+			System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tBanana[1.5] \t\t\t    5.75");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tCarrot[2.5] \t\t\t    8.25");
+			System.out.println("\t\t       \t\t      \t\t       \t\t\t Ice cream[1]\tChocolate[1.0] \t\t\t    4.5");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tVanila[0.5] \t\t\t    3.25"); 
+			System.out.println("\n\t\t#####################################################################################################################");
+			System.out.println("\t\t#####################################################################################################################");
+		}
+		
+		else if(ans_service == 3) {  
+			System.out.print("\n\n\t\t####################################################################################################################");
+			System.out.println("\n\t\t\t\t\t\t\tCategory 3: Special Slice");
+			System.out.println("\t\t####################################################################################################################");
+			System.out.println("\n\t\t Size(inch) [code] \tShape (kg) \tHeight(inch) \tType [code] \tName [code] \t\t\tPrice (RM)"); //2.2.2.4.4tab //
+			
+			System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tBurnt Cheese[3] \t\t    10");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tRed velvet[4] \t\t\t    10");
+			System.out.println("\t\t       2[0]\t\tTriangular\t     5       \t Baked[10]\tRainbow[15] \t\t\t    10");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tCreamy Vanila Fruit Cake[6] \t    10");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tChocolate Truffle Cream Cake[13]    10");
+			System.out.println("\t\t\t\t\t\t\t\t\t\t\tClassic Almond Cake[14] \t    10");
+
+			System.out.println("\n\t\t#####################################################################################################################");
+			System.out.println("\t\t#####################################################################################################################");
+			
+		}
+		
+		else {
+			while ((ans_service > 3) || (ans_service < 1)) {
+			System.out.print("\n\tInvalid service code. Choose again: ");
+			System.out.print("\n\t 1. Special Choose \n\t 2. Special Slice \n\t 3. Special Cupcake \n\n\t Which service do you prefer: "); 
+			ans_service = sc.nextInt();
+			
+			if (ans_service == 1) {
+				System.out.println("\n\n\t\t####################################################################################################################");
+				System.out.println("\t\t\t\t\t\t\t Category 1: Special Choose");
+				System.out.println("\t\t####################################################################################################################");
+				System.out.println("\n\t\t Size(inch) [code] \tWeight (kg) \tHeight(inch) \tType [code] \tName [code] \t\t\tPrice (RM)");
+				System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tTiramisu[9] \t\t\t    94");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tNew York Cheese Cake[10] \t    100");
+				System.out.println("       \t\t      \t\t       \t\t\t\t\t Baked[40]\tBlack Forest[11] \t\t    106");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tCaramel Cream[7] \t\t    82");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tOreo Cake[8] \t\t\t    88");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tOld Fashion Chocolate Cake[12]\t    112"); 
+				
+				System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tTiramisu[9] \t\t\t    96");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tNew York Cheese Cake[10] \t    102");
+				System.out.println("\t\t     6[6]\t\t   0.7 \t\t     5 \t\t Steam[42]\tBlack Forest[11] \t\t    108");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tCaramel Cream[7] \t\t    84");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tOreo Cake[8] \t\t\t    90");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tOld Fashion Chocolate Cake[12]\t    114"); 
+				
+				System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tTiramisu[9] \t\t\t    114");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tNew York Cheese Cake[10] \t    120");
+				System.out.println("       \t\t       \t\t      \t\t\t\t\tIce cream[60]\tBlack Forest[11] \t\t    126");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tCaramel Cream[7] \t\t    104");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tOreo Cake[8] \t\t\t    108");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tOld Fashion Chocolate Cake[12]\t    132"); 
+				System.out.println("\t\t#####################################################################################################################");
+				System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tTiramisu[9] \t\t\t    112");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tNew York Cheese Cake[10] \t    120");
+				System.out.println("       \t\t      \t\t       \t\t\t\t\t Baked[40]\tBlack Forest[11] \t\t    128");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tCaramel Cream[7] \t\t    96");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tOreo Cake[8] \t\t\t    104");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tOld Fashion Chocolate Cake[12]\t    136"); 
+				
+				System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tTiramisu[9] \t\t\t    114");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tNew York Cheese Cake[10] \t    122");
+				System.out.println("\t\t     8[8]\t\t   1.3 \t\t     5 \t\t Steam[42]\tBlack Forest[11] \t\t    130");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tCaramel Cream[7] \t\t    98");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tOreo Cake[8] \t\t\t    106");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tOld Fashion Chocolate Cake[12]\t    138"); 
+				
+				System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tTiramisu[9] \t\t\t    132");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tNew York Cheese Cake[10] \t    140");
+				System.out.println("\t\t       \t\t       \t\t      \t\t\tIce cream[60]\tBlack Forest[11] \t\t    148");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tCaramel Cream[7] \t\t    116");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tOreo Cake[8] \t\t\t    124");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tOld Fashion Chocolate Cake[12]\t    136"); 
+				System.out.println("\n\t\t#####################################################################################################################");
+				System.out.println("\t\t#####################################################################################################################");}
+			
+			else if (ans_service == 2) {
+				System.out.print("\n\n\t\t####################################################################################################################");
+				System.out.println("\n\t\t\t\t\t\t\tCategory 2: Special Cupcake");
+				System.out.println("\t\t####################################################################################################################");
+				System.out.println("\n\t\t Size(inch) [code] \tWeight (kg) \tHeight(inch) \tType [code] \tName [code] \t\t\tPrice (RM)"); //2.2.2.4.4tab //
+				
+				System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tBanana[1.5] \t\t\t    4");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tCarrot[2.5] \t\t\t    6");
+				System.out.println("\t\t       \t\t      \t\t       \t\t\t Baked[1]\tChocolate[1.0] \t\t\t    3");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tVanila[0.5] \t\t\t    2");
+			
+				
+				System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tBanana[1.5] \t\t\t    4.5");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tCarrot[2.5] \t\t\t    6.5");
+				System.out.println("\t\t     2.0[2]\t\t   0.08 \t     1.5 \t Steam[1.5]\tChocolate[1.0] \t\t\t    3.5");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tVanila[0.5] \t\t\t    2.5");
+
+				
+				System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tBanana[1.5] \t\t\t    5");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tCarrot[2.5] \t\t\t    7");
+				System.out.println("\t\t       \t\t      \t\t       \t\t\t Ice cream[1]\tChocolate[1.0] \t\t\t    4");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tVanila[0.5] \t\t\t    3");
+
+				System.out.println("\t\t#####################################################################################################################");
+				System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tBanana[1.5] \t\t\t    4.75");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tCarrot[2.5] \t\t\t    7.25");
+				System.out.println("\t\t       \t\t      \t\t       \t\t\t Baked[1]\tChocolate[1.0] \t\t\t    3.5");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tVanila[0.5] \t\t\t    2.25");
+				
+				System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tBanana[1.5] \t\t\t    5.25");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tCarrot[2.5] \t\t\t    7.75");
+				System.out.println("\t\t     2.5[2.5]\t\t   0.08 \t     1.5 \t Steam[1.5]\tChocolate[1.0] \t\t\t    4");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tVanila[0.5] \t\t\t    2.75");
+				
+				System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tBanana[1.5] \t\t\t    5.75");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tCarrot[2.5] \t\t\t    8.25");
+				System.out.println("\t\t       \t\t      \t\t       \t\t\t Ice cream[1]\tChocolate[1.0] \t\t\t    4.5");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tVanila[0.5] \t\t\t    3.25"); 
+				System.out.println("\n\t\t#####################################################################################################################");
+				System.out.println("\t\t#####################################################################################################################");
+			}
+			
+			else if(ans_service == 3) {
+				System.out.print("\n\n\t\t####################################################################################################################");
+				System.out.println("\n\t\t\t\t\t\t\tCategory 3: Special Slice");
+				System.out.println("\t\t####################################################################################################################");
+				System.out.println("\n\t\t Size(inch) [code] \tShape (kg) \tHeight(inch) \tType [code] \tName [code] \t\t\tPrice (RM)"); //2.2.2.4.4tab //
+				
+				System.out.println("\n\t\t\t\t\t\t\t\t\t\t\tBurnt Cheese[3] \t\t    10");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tRed velvet[4] \t\t\t    10");
+				System.out.println("\t\t       2[0]\t\tTriangular\t     5       \t Baked[10]\tRainbow[15] \t\t\t    10");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tCreamy Vanila Fruit Cake[6] \t    10");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tChocolate Truffle Cream Cake[13]    10");
+				System.out.println("\t\t\t\t\t\t\t\t\t\t\tClassic Almond Cake[14] \t    10");
+
+				System.out.println("\n\t\t#####################################################################################################################");
+				System.out.println("\t\t#####################################################################################################################");
+				
+			}
+			
+			else{
+				System.out.print("Error");
+				System.exit(0);
+			}
+	
+		}
+}		
+	 //part3: instruction that ask customer to choose their cake
+	System.out.print("\n\tFor the first 3 questions below, Please state the CODE : ");
+	System.out.print("\n\tWhich size do you want? : ");
+	ans_size1=sc.nextDouble();
+	System.out.print("\tWhat is the name of cake that you want to order? : ");
+	ans_code1=sc.nextDouble();
+	System.out.print("\tWhat type of cake do you prefer? : ");
+	ans_type1=sc.nextDouble();
+	System.out.print("\tHow many cakes do you want?: ");
+	ans_no1=sc.nextInt(); 
+		
+	
+		
+		//part 4: menu of packaging material    //for method sama dgn yg ats nnti..
+		System.out.print("\n\n\t 1. Special Choose \n\t 2. Special Slice \n\t 3. Special Cupcake \n"); 
+		System.out.print("\n\tChoose the type of packaging, based on the service you choose: "); //if using sc.next()..jangan selang
+		type_pack=sc.nextInt();
+		
+		if (type_pack == 1) {
+		
+		System.out.println("####################################################################################################################");
+		System.out.println("\t\t\t\tPackaging for Category 1: Special Choose");
+		System.out.println("####################################################################################################################");
+		System.out.println(" Type \t\tHeight(inch)/Shape [code] \tDecoration colour/colour \tMaterial Used [code] \tPrice (RM)"); //2.2.2.4.4tab //
+		System.out.println("\n\t \t\t      \t\t\t\tWhite \t\t\t  Glass]46] \t\t    184");
+		System.out.println("\t\t\t4[4]    \t\t\tSilver\t\t\t  Clay[35] \t\t    140");
+		System.out.println("\t\t\t\t\t\t\tGold \t\t\t  Wood[35] \t\t    44");
+		System.out.println("Cake_Stand\t\t\t\t\t\t\t\t\t  Aluminium[11] \t    28");
+		System.out.println("\n\t \t\t      \t\t\t\tWhite \t\t\t  Glass]46] \t\t    230");
+		System.out.println("\t\t\t5[5]    \t\t\tSilver\t\t\t  Clay[35] \t\t    175");
+		System.out.println("\t\t\t\t\t\t\tGold \t\t\t  Wood[35] \t\t    55");
+		System.out.println("\t\t\t\t\t\t\t\t\t\t  Aluminium[11] \t    35");
+		System.out.println("#########################################################################################################################");
+		System.out.println("\t\t    Square[1] \t\t\t\tWhite \t\t\t  Glass[46] \t\t    46");
+		System.out.println("Cake_Board\t    Rectangle[1]  \t\t\tSilver\t\t\t  Clay[35] \t\t    35");
+		System.out.println("\t\t    Round[1]\t\t\t\tGold \t\t\t  Wood[7] \t\t    11");
+		System.out.println("\t\t\t\t\t\t\t\t\t\t  Aluminium[11]\t\t    7");
+		System.out.println("\n#########################################################################################################################");
+		System.out.println("#########################################################################################################################");
+		}
+		
+		else if (type_pack == 2) {
+		System.out.println("\n\n#####################################################################");
+		System.out.println("\t\t Packaging for Category 2: Special Cupcake");
+		System.out.println("#####################################################################");
+		System.out.println(" Type  \t\tHeight/code \tMaterial Used [code] \tPrice (RM)"); //2.2.2.4.4tab //
+		System.out.println("\n\t \t\t      \tAluminium foil[2]  \t    2");
+		System.out.println("Box_of_\t\t  3[1]\t\tBagasse Paper[3] \t    3");
+		System.out.println("6_cups\t\t\t\tShop's container[8] \t    8");
+		System.out.println("\t\t\t\tContainer[0] \t\t    0");
+		System.out.println("\n#####################################################################");
+		System.out.println("#####################################################################");
+		}
+		
+		else if(type_pack == 3) {
+		System.out.println("\n\n#####################################################################");
+		System.out.println("\t\t Packaging for Category 3: Special Slice");
+		System.out.println("#####################################################################");
+		System.out.println(" Type  \t\tHeight/code \tMaterial Used [code] \tPrice (RM)"); //2.2.2.4.4tab //
+		System.out.println("\n\t \t\t      \tAluminium foil[0.7]  \t    1.4");
+		System.out.println("Box_of_\t\t  6[2]\t\tBagasse Paper[0.5] \t    1");
+		System.out.println("2_slices\t\t\tShop's container[2] \t    4");
+		System.out.println("\t\t\t\tContainer[0] \t\t    0");
+	
+		System.out.println("\n#####################################################################");
+		System.out.println("#####################################################################");
+		}
+		
+		 //part 5: customer choose packaging material
+		System.out.print("\n\tFor the questions below, Please state the CODE : ");
+		System.out.print("\n\tWhat is the height/shape of packaging : ");
+		size_pack=sc.nextDouble();
+		System.out.print("\tWhat is the material used to create the packaging? : ");
+		mater_pack=sc.nextDouble(); 
+		
+		
+			
+		//part 6: calculate all the process include
+		price_one_cake= (ans_size1 * ans_code1)+ ans_type1;
+		to_price= (ans_no1*price_one_cake);
+		price_pack= (size_pack*mater_pack)* ans_no1;
+		sum_all= (price_pack + to_price) ;
+		dis_rec=(0.05*sum_all);
+		pay=(sum_all - dis_rec) + ans_state;  
+	
+			
+	 	//part 7: for print receipt nanti
+		System.out.println("\n\n###########################################");
+		System.out.println("\tCUSTOMER'S RECEIPT");
+		System.out.println("\tNAME: " +name);
+		System.out.println("\tDATE OF ORDER: "+ order);
+		System.out.println("\tDATE TO PICK UP: "+ take);
+		
+		System.out.println("\n\tDETAILS");
+		System.out.println("\tCODE FOR SIZE OF CAKE: " +ans_size1);  //if want 
+		System.out.println("\tCODE FOR CAKE: "+ ans_code1);
+		System.out.println("\tCODE FOR TYPE OF CAKE: "+ ans_type1);
+		System.out.println("\tQUANTITY OF CAKE: "+ ans_no1);
+		System.out.println("\tTYPE OF PACKAGING: "+ type_pack);
+		System.out.println("\tCODE FOR PACKAGING SIZE: "+ size_pack);
+		System.out.println("\tCODE FOR PACKAGING MATERIAL: " + mater_pack);
+		
+		System.out.println("\n\tSUBTOTAL: " +sum_all);
+		System.out.printf("\tDISCOUNT RECEIVE: %.1f" ,dis_rec);
+		System.out.printf("\n\tTOTAL PAYMENT: %.1f", pay);
+		System.out.print("\n\n       *Please bring your container\n\t3 days before date of pick up\n\tThank you for purchase from us*");
+		System.out.println("\n\n###########################################");
+	
+}	
+}
